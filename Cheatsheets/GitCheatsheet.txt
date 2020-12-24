@@ -2,12 +2,16 @@
 
 				BASIC WORKFLOW
 
+WD - Working Directory
+
 git status - see current commit, modified files, and files not tracked in WD
 git init - creates .git folder
 git add [file names] - adds files to staging area
 git diff [filename] = check differences between WD and staging area
 git commit - stores files from staging area to repo
 	-m "[message]" message required for commit
+git push - pushes changes to github
+	-origin [branch_name] pushes local branch to origin remote 
 git log - shows list of previous commits
 
 				BACKTRACKING
@@ -21,7 +25,16 @@ git reset [commit_SHA] - reset project to the last commit with the first 7 numbe
 
 git branch - Lists all a Git project's branches
 git branch [branch_name] - create new branch
-	-d [branch_name] - delete branch
+	-d [branch_name] - deletes branch that has been merged into master
+	-D [branch_name] = deletes branch that has not been merged into master
 git checkout [branch_name] - switch branches
 git merge [branch_name] - join file changes from one branch to another
+	-origin/master merges origin into local branch
+
+				TEAMWORK
+git clone [repo_url] - clones repo to WD
+git clone [remote_location] [clone_name] - create replica of remote with new name
+git remote - show name of remote address
+	-v more descriptive
+git fetch - fetches work from remote into local copy
 
