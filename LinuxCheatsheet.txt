@@ -1,0 +1,37 @@
+				Linux Commands
+
+ls - list contents of directory 
+	-l list as long format
+	-a list all, including hidden files
+	-t list all contents by when they were last modified
+
+pwd - print working directory 
+mkdir - make directory 
+cd - change directory 
+	-cd .. goes to parent
+touch - create new file
+cp - copy [source] [destination]
+mv - move [source] [directory]
+rm - delete files
+	-r deletes directories and any children
+>> - [stdout] >> [file] appends output to file 
+| -  c - [command] | [new(c - stdout)] transfers standard output on left as input to right, mainly used to pass output to program or utility
+> - c - [command] | [func(c - stdout)] redirect output by taking output from left and passing as iput to file on right
+cat - displays content of file
+grep - search files for lines that match a pattern
+	-i case insensitive search
+	-R searches all files in directory and its children, outputting filenames and lines
+env - returns list of env variables
+history - get history of commands
+
+				Terms
+stdin - standard input (text)
+stdout - standard output (text)
+
+				Enviroment Stuff
+~/.bash_profile - bash profile
+	- alias - assign commands to hotkeys
+	- source - execute changes in bash_profile
+	- export - makes given variable to all child sessions
+
+
