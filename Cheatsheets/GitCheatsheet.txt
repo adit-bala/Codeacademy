@@ -11,6 +11,17 @@ git commit - stores files from staging area to repo
 git log - shows list of previous commits
 
 				BACKTRACKING
+
 git checkout [filename] - restore file in WD to look like the last commit
 git reset [filename] - unstage files from staging area
 git reset [commit_SHA] - reset project to the last commit with the first 7 numbers of a commits SHA
+
+
+				BRANCHING
+
+git branch - Lists all a Git project's branches
+git branch [branch_name] - create new branch
+	-d [branch_name] - delete branch
+git checkout [branch_name] - switch branches
+git merge [branch_name] - join file changes from one branch to another
+
