@@ -1,0 +1,16 @@
+				Git Commands
+
+				BASIC WORKFLOW
+
+git status - see current commit, modified files, and files not tracked in WD
+git init - creates .git folder
+git add [file names] - adds files to staging area
+git diff [filename] = check differences between WD and staging area
+git commit - stores files from staging area to repo
+	-m "[message]" message required for commit
+git log - shows list of previous commits
+
+				BACKTRACKING
+git checkout [filename] - restore file in WD to look like the last commit
+git reset [filename] - unstage files from staging area
+git reset [commit_SHA] - reset project to the last commit with the first 7 numbers of a commits SHA
