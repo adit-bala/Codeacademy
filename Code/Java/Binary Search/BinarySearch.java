@@ -13,7 +13,6 @@ public class BinarySearch {
           right = mid;
         }
       }
-  
       return -1;
     }
   
