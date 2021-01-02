@@ -104,6 +104,20 @@ public class LinkedList {
         }
         return current;
       }
+
+      public static Node findMiddle(LinkedList linkedList) {
+        Node fast = linkedList.head;
+        Node slow = linkedList.head;
+       
+        while (fast != null) {
+          fast = fast.getNextNode();
+          if (fast != null) {
+            fast = fast.getNextNode();
+            slow = slow.getNextNode();
+          }
+        }
+        return slow;
+      }
     
 
     public String printList() {
