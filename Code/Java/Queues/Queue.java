@@ -9,12 +9,34 @@ public class Queue {
       this(DEFAULT_MAX_SIZE);
     }
     
-    public Queue(int maxSize){
+    public Queue(int maxSize) {
       this.queue = new LinkedList();
       this.size = 0;
       this.maxSize = maxSize;
     }
-      
-    public static void main(String[] args) {
+    
+    public boolean hasSpace() {
+      return this.size < this.maxSize;
     }
+    
+    public boolean isEmpty() {
+      return this.size == 0;
+    }
+    
+    public void enqueue(String data) {
+      this.queue.addToTail(data);
+      this.size++;
+    }
+    
+    public String dequeue() {
+      String data = this.queue.removeHead();
+      this.size--;
+      return data;
+    }
+    
+    public String peek() {
+      return this.queue.head.data;
+    }
+    
+
 }
