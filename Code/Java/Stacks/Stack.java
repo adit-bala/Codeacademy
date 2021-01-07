@@ -15,22 +15,39 @@ public class Stack {
         this.maxSize = maxSize;
     }
 
+    public boolean hasSpace() {
+        return this.size < this.maxSize;
+    }
+
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
     public void push(String data) {
-        this.stack.addToHead(data);
-        this.size++;
+        if (this.hasSpace()) {
+            this.stack.addToHead(data);
+            this.size++;
+        } else {
+            throw new Error("Stack is full!");
+        }
     }
 
     public String pop() {
-        String data = this.stack.removeHead();
-        this.size--;
-        return data;
+        if (!this.isEmpty()) {
+            String data = this.stack.removeHead();
+            this.size--;
+            return data;
+        } else {
+            throw new Error("Stack is empty!");
+        }
     }
 
     public String peek() {
-        return this.stack.head.data;
-    }
-
-    public static void main(String[] args) {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.stack.head.data;
+        }
     }
 
 }
