@@ -1,0 +1,28 @@
+				Bash CheatSheet
+ - run files with ./[file_name]
+ - variables declared with equal sign and no space
+	- greeting="Hello World"
+ - variables accessed using dollar sign
+	- echo $greeting
+ - Conditionals use if, then, else, fi syntax
+	- if [ $greeting_occasion -lt 1 ]
+	  then
+  	  	echo $first_greeting
+	  else
+  		echo $later_greeting
+	  fi
+ - while and until loops use while/until, do, done
+ - Bash uses unique set of comparison operators
+	- Equal: -eq
+	- Not equal: -ne
+	- Less than or equal: -le
+	- Less than: -lt
+	- Greater than or equal: -ge
+	- Greater than: -gt
+	- Is null: -z
+ - Input arguments passed after script call with space
+	- Hello.sh "greeting" 3
+ - Input requested with read keyword and assigns to variable
+	- read greeting
+ - Aliases can be created in .bashrc or .bash_profile using alias keyword
+	- alias HelloWorld="./Hello.sh "HelloWorld" 3"		
