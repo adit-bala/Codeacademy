@@ -1,2 +1,35 @@
-				Regex
-			
+									Regex
+
+ DOCUMENT FORMATTING:
+
+ - Term Regex: Definition
+	- Regex code
+		- matching examples
+	- Extra usages (if they exist)
+
+- Literals: match exact characters
+	- a
+		- a
+ - Alternations | : match text either preceding or following the |
+	- I love gorillas|babboons 
+		- I love gorillas
+		- I love babboons
+ - Character Sets []: match one character from series of characters
+	- con[sc]en[sc]us
+		- consensus
+		- concensus
+		- consencus
+		- concencus
+ - Wildcards .: match any single character (letter, number, symbol, whitespace)
+	- .........
+		- orangutan
+		- marsupial
+ - Ranges [ - ]: specify range of characters that can match
+	- I love [1-5] bowls of curry
+		- I love 2 bowls of curry
+		- I love 4 bowls of curry
+		- [A-Z] all uppercase
+		- [a-z] all lowercase
+		- [0-9] all digits
+		- [A-Za-z] any single capital or lowercase alphabetical character
+ - 
