@@ -32,4 +32,13 @@
 		- [a-z] all lowercase
 		- [0-9] all digits
 		- [A-Za-z] any single capital or lowercase alphabetical character
+ - Shorthand Character Cases: Represent common ranges
+	- \w
+		- Represents [A-Za-z0-9_], matching single uppercase character, lowercase character, digit or underscore
+	- \d
+		- Represents [0-9], matching single digit character
+	- \s
+		- Represents [\t\r\n\f\v], matching a single space, tab, carriage return, line break, form feed, or vertical tab
+
+	- Capitals of the previous Shorthand Character Cases represent NOT including those characters
  - 
