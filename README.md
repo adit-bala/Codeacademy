@@ -1,1 +1,1 @@
-# Codeacademy
+# Preparing for Technical Interviews
