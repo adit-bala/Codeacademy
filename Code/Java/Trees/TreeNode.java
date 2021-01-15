@@ -32,7 +32,6 @@ public class TreeNode {
         }
     }
 
-    // removeChild with data parameter
     public void removeChild(Object data) {
         if (this.children.isEmpty()) {
             return;
@@ -46,15 +45,5 @@ public class TreeNode {
         for (TreeNode child : this.children) {
             child.removeChild(data);
         }
-    }
-
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(30);
-        TreeNode child = new TreeNode(26);
-        root.addChild(child);
-        // Remove child from root
-        root.removeChild(child);
-        // Print size of root's children list
-        System.out.println(root.children.size());
     }
 }

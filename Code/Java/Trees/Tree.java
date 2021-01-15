@@ -20,23 +20,21 @@ public class Tree {
         }
     }
 
-    // Define depthFirstTraversal() below
+    public void depthFirstTraversal(TreeNode current) {
+        System.out.print(current.data + " ");
+        for (TreeNode child : current.children) {
+            depthFirstTraversal(child);
+        }
+    }
 
-    public static void main(String[] args) {
-        TreeNode treeRoot = new TreeNode("S");
-        TreeNode child1 = new TreeNode("N");
-        TreeNode child2 = new TreeNode("O");
-        TreeNode grandchild1 = new TreeNode("W");
-        TreeNode grandchild2 = new TreeNode("Y");
-        treeRoot.addChild(child1);
-        treeRoot.addChild(child2);
-        child1.addChild(grandchild1);
-        child2.addChild(grandchild2);
-
-        Tree tree = new Tree(treeRoot);
-        tree.print();
-
-        // Call depthFirstTraversal below
-
+    public void breadthFirstTraversal() {
+        TreeNode current = this.root;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(current);
+        while (!queue.isEmpty()) {
+            current = queue.poll();
+            System.out.print(current.data + " ");
+            queue.addAll(current.children);
+        }
     }
 }
