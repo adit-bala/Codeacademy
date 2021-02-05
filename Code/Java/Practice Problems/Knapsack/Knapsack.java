@@ -20,8 +20,14 @@ public class Knapsack {
 
         for (index = 0; index <= i; index++) {
             for (weight = 0; weight <= weightCap; weight++) {
-                // add code here
-
+                if (index == 0 || weight == 0)
+                    matrix[index][weight] = 0;
+                else if (weights[index - 1] <= weight)
+                    matrix[index][weight] = Math.max(values[index - 1] + matrix[index - 1][weight - weights[index - 1]],
+                            matrix[index - 1][weight]);
+                else {
+                    matrix[index][weight] = matrix[index - 1][weight];
+                }
             }
         }
         return matrix[i][weightCap];
